@@ -1,0 +1,75 @@
+.body 
+{
+    background-color: rgb(203, 235, 235);
+}
+
+.OFF
+{
+    opacity: 0%;
+}
+
+.ON
+{
+    opacity: 100%;
+}
+
+.proyectos
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: auto;
+    border: 1px solid; color: black;
+    margin: 1%;
+      
+}
+
+.proyectos-texto
+{
+    text-align: center ;
+}
+
+.encabezado 
+{
+    background-color: rgb(63, 73, 161);
+    outline-style: ridge;
+    outline-color: rgb(160, 160, 248);
+    border-bottom: 2px;
+}
+
+.datos 
+{
+    background-color: rgb(63, 73, 161);
+    outline-style: ridge;
+    outline-color: rgb(75, 75, 146);
+    padding: 10px;
+    width:20%;
+    position: fixed;
+    right: 1%;
+    border-radius: 2px;
+}
+
+.borde-img 
+{
+    border: 1px solid; color: black;
+    margin: 1px;
+    position: relative;
+    right: 4px;
+    border-radius: 2px;
+}
+
+.letra 
+{
+    color: aliceblue;
+    padding: 10px;
+    -webkit-text-stroke: .7px;
+    -webkit-text-stroke-color: black;
+}
+
+.letra2 
+{
+    color: rgba(14, 1, 1, 0.575);
+    -webkit-text-stroke: .5px;
+    -webkit-text-stroke-color: black;
+}
