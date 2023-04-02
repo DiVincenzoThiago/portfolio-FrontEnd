@@ -1,28 +1,24 @@
+<html class="body">
+
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="app.component.css">
+  <link rel="stylesheet" href="./app.component.css">
   
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0
-  .0/css/bootstrap.min.css">
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min
   .js"></script>
   <!-- Popper JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/p
   opper.min.js"></script>
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.
-  min.js"></script>
   
   <title>Intento de portafolio</title>
   
   </head>
   
   <body class="body">
-  
+    
   
   <header>
   
@@ -32,7 +28,17 @@
           <h1>
               <p class="letra"> Portafolio</p>
           </h1>
-          
+      </div>
+      <div>
+        
+        <nav>
+          <router-outlet>
+          <a class="button" routerLink="/lobby">lobby</a>
+          <a class="button" routerLink="/proyectos">proyectos</a>
+          <a class="button" routerLink="/capacitaciones">capacitaciones</a>
+          <a class="button" routerLink="/about">about</a>
+        </router-outlet>
+        </nav>
       </div>
    
   </header>
@@ -50,56 +56,17 @@
   </div>
   </aside>
   
-  <div class="container">
-  <div class="row">
-  <div class="col-6">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAAB6CAMAAABHh7fWAAAAMFBMVEXk5ueutLfBxsjn6eqrsbTIzM7Q09XV2Nrb3t/g4uPY29y1ur2orrG9wsS6v8GxtroaemS9AAAClUlEQVRoge2a0XKEIAxFwQREUfz/vy3qtrttFRM30dkZ7lPfTi8EiDdrTFVVVVVVVVVVVVXVpwgATJ8VYP7rSm5wCYdVdvTmKjgYNyHapxBTewU8g39xH/TYq8Ohj//BC7zpdOHgtsEze1I1DuMueYZ7PTbsLPa3BrVqOyJntpJvaI7Iec1VfIM/Jls7dQrojgDOtkd525AoplWWvKWR85JLoyESyfl0C6PJprNkbcNIJ2MrijYM01a0yGln+se2KJpwkT019JJoBji7dpK2BxZ7FCT3PHSUI/OqLEsQvd8WbQrvQw9yL+cHofFGtBj5zgo34bZzbYCHbiTRE4cseoczX64gR+b1R7LvtQEGGhtZNGPFUbJTyOrp6CjciEMim5buw+m2pU3Td1t6p2cRvzRly3sVkM625PX9wqY8neGuRAPV8qtydqWZIB351vO8sPf7FYzaSWWXttsGdKrcFd7+T+4QR6XS/sM2PtmXYBpxai4BL3DofDNl5vwPRNdeNgV40DM/hM5cOvtYqX3b+lltv/L1qSZ4l9a1fspOyfm+U+PP06WVunm2ll1XwefCGuM29ZU/Jd+JFl3221hil4KY5OZeAD6yPnzQOpE7dXuudWj9/UvmFHilj+85B0/d4i3n7vyeQyAm/3vweLZ1eMfyN/zcl/ZRN0Q0zt9xMG9bfsC5XRMEGbBlT/xo7T5RrHwDWjkwjw1BlMyaLguT6SM/+jSNwaaRmYEoTZQPfmAOG4gilZrCci/sw6CaHQKT0cczPyXTxyGLmumMTmXbGgfrR+XdZoSCbJWLnBc+c1X8KQEvcmertOK0WO6siump5DO9gS4kiTrX91OF4yXSCe4LC5MJcI2uCiUOyiqUWVVVVdWn6guTZh4+pagl5AAAAABJRU5ErkJggg==" class="proyectos" (onclick)="onClick()">
-  </div>
-  <div class=col-3>
-    <div class="proyectos-texto">
-      <h1>proyecto 1</h1>
-    </div>
-  </div>
-  </div>
-  <div class="row">
-    <div class="col-6">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAAB6CAMAAABHh7fWAAAAMFBMVEXk5ueutLfBxsjn6eqrsbTIzM7Q09XV2Nrb3t/g4uPY29y1ur2orrG9wsS6v8GxtroaemS9AAAClUlEQVRoge2a0XKEIAxFwQREUfz/vy3qtrttFRM30dkZ7lPfTi8EiDdrTFVVVVVVVVVVVVXVpwgATJ8VYP7rSm5wCYdVdvTmKjgYNyHapxBTewU8g39xH/TYq8Ohj//BC7zpdOHgtsEze1I1DuMueYZ7PTbsLPa3BrVqOyJntpJvaI7Iec1VfIM/Jls7dQrojgDOtkd525AoplWWvKWR85JLoyESyfl0C6PJprNkbcNIJ2MrijYM01a0yGln+se2KJpwkT019JJoBji7dpK2BxZ7FCT3PHSUI/OqLEsQvd8WbQrvQw9yL+cHofFGtBj5zgo34bZzbYCHbiTRE4cseoczX64gR+b1R7LvtQEGGhtZNGPFUbJTyOrp6CjciEMim5buw+m2pU3Td1t6p2cRvzRly3sVkM625PX9wqY8neGuRAPV8qtydqWZIB351vO8sPf7FYzaSWWXttsGdKrcFd7+T+4QR6XS/sM2PtmXYBpxai4BL3DofDNl5vwPRNdeNgV40DM/hM5cOvtYqX3b+lltv/L1qSZ4l9a1fspOyfm+U+PP06WVunm2ll1XwefCGuM29ZU/Jd+JFl3221hil4KY5OZeAD6yPnzQOpE7dXuudWj9/UvmFHilj+85B0/d4i3n7vyeQyAm/3vweLZ1eMfyN/zcl/ZRN0Q0zt9xMG9bfsC5XRMEGbBlT/xo7T5RrHwDWjkwjw1BlMyaLguT6SM/+jSNwaaRmYEoTZQPfmAOG4gilZrCci/sw6CaHQKT0cczPyXTxyGLmumMTmXbGgfrR+XdZoSCbJWLnBc+c1X8KQEvcmertOK0WO6siump5DO9gS4kiTrX91OF4yXSCe4LC5MJcI2uCiUOyiqUWVVVVdWn6guTZh4+pagl5AAAAABJRU5ErkJggg==" class="proyectos" (onclick)="onClick()">
-    </div>
-    <div class=col-3>
-      <div class="proyectos-texto">
-        <h1>proyecto 2</h1>
-      </div>
-    </div>
-    </div>
-    <div class="row">
-      <div class="col-6">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAAB6CAMAAABHh7fWAAAAMFBMVEXk5ueutLfBxsjn6eqrsbTIzM7Q09XV2Nrb3t/g4uPY29y1ur2orrG9wsS6v8GxtroaemS9AAAClUlEQVRoge2a0XKEIAxFwQREUfz/vy3qtrttFRM30dkZ7lPfTi8EiDdrTFVVVVVVVVVVVVXVpwgATJ8VYP7rSm5wCYdVdvTmKjgYNyHapxBTewU8g39xH/TYq8Ohj//BC7zpdOHgtsEze1I1DuMueYZ7PTbsLPa3BrVqOyJntpJvaI7Iec1VfIM/Jls7dQrojgDOtkd525AoplWWvKWR85JLoyESyfl0C6PJprNkbcNIJ2MrijYM01a0yGln+se2KJpwkT019JJoBji7dpK2BxZ7FCT3PHSUI/OqLEsQvd8WbQrvQw9yL+cHofFGtBj5zgo34bZzbYCHbiTRE4cseoczX64gR+b1R7LvtQEGGhtZNGPFUbJTyOrp6CjciEMim5buw+m2pU3Td1t6p2cRvzRly3sVkM625PX9wqY8neGuRAPV8qtydqWZIB351vO8sPf7FYzaSWWXttsGdKrcFd7+T+4QR6XS/sM2PtmXYBpxai4BL3DofDNl5vwPRNdeNgV40DM/hM5cOvtYqX3b+lltv/L1qSZ4l9a1fspOyfm+U+PP06WVunm2ll1XwefCGuM29ZU/Jd+JFl3221hil4KY5OZeAD6yPnzQOpE7dXuudWj9/UvmFHilj+85B0/d4i3n7vyeQyAm/3vweLZ1eMfyN/zcl/ZRN0Q0zt9xMG9bfsC5XRMEGbBlT/xo7T5RrHwDWjkwjw1BlMyaLguT6SM/+jSNwaaRmYEoTZQPfmAOG4gilZrCci/sw6CaHQKT0cczPyXTxyGLmumMTmXbGgfrR+XdZoSCbJWLnBc+c1X8KQEvcmertOK0WO6siump5DO9gS4kiTrX91OF4yXSCe4LC5MJcI2uCiUOyiqUWVVVVdWn6guTZh4+pagl5AAAAABJRU5ErkJggg==" class="proyectos" (onclick)="onClick()">
-      </div>
-      <div class=col-3>
-        <div class="proyectos-texto">
-          <h1>Proyecto 3</h1>
-        </div>
-      </div>
-      </div>
-  </div>
-  </div>
-  </div>
+  <nav>
+
+  </nav>
+
   
   <br>
-  <p><H2>Sobre MI</H2></p>
+  
   <br><br><br><br><br><br><br><br><br><br><br><br>
   <p>--------------------------------------------</p>
-  <my-app>
-  <script language="javascript" type="text/javascript" src="Modulo 3\Proyecto-angular\src\<app\app.module.ts">
-    <!--
-      onClick() {
-    alert('Hiciste click!!');
-  }
-  
-    //
-    -->
-    </script>
-    </my-app>
+
+
   </body>      
-  </html>
   
+</html>

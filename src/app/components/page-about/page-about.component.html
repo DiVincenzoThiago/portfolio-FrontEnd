@@ -1,1 +1,75 @@
-<p>page-about works!</p>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="page-about.component.css">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0
+    .0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min
+    .js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/p
+    opper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.
+    min.js"></script>
+    
+    <title>Acerca de mi</title>
+    
+    </head>
+    
+    <body class="body">
+    
+    
+    <header>
+        <div class="row, encabezado">
+            <h1>
+                <p class="letra"> Acerca de mi</p>
+            </h1>
+        </div>
+    </header>
+
+
+<form [formGroup]="Form" (ngSubmit)="onEnviar($event)">
+  <div>
+    <label for="usuario">usuario</label>
+    <input type="text" formControlName="usuario" >
+  </div>
+  <div>
+  <div *ngIf="usuario?.errors  && usuario?.touched">    
+  <p *ngIf="usuario?.hasError('required')" class="error">
+      El usuario es requerido.
+  </p>
+  <p *ngIf="usuario?.errors?.minlength" class="error">
+      El usuario debe tener mas de 5 letras.
+    </p>
+
+    <p *ngIf="usuario?.errors?.maxlength" class="error">
+    El usuario debe tener menos de 12 letras.
+  </p>
+</div>
+  </div>
+
+
+
+  <br>
+  <div>
+   <label for="email">email</label>
+   <input type="email" formControlName="email"/>
+  </div>
+  <br>
+  <div>
+   <label for="password">password</label>
+   <input type="password" formControlName="password"/>
+  </div>
+  <br>
+  <button type="submit" >Iniciar sesion</button>
+</form>
+        <div style="position: fixed">{{ preview }}</div>
+
+    </body>
+    

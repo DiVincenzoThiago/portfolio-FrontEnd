@@ -8,7 +8,13 @@ import { PagesModule } from "./pages/pages.module";
 import { PageOneComponent } from './components/page-one/page-one.component';
 import { PageTwoComponent } from './components/page-two/page-two.component';
 import { PageAboutComponent } from './components/page-about/page-about.component';
-import { Page404Component } from './components/page404/page404.component';
+import { PageLobbyComponent } from './components/page-lobby/page-lobby.component';
+import { PageOneBComponent } from './components/page-one-b/page-one-b.component';
+import { PageOneCComponent } from './components/page-one-c/page-one-c.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {FormControl} from '@angular/forms';
+import { FormBuilder, FormGroup } from "@angular/forms";
+import { Component, OnInit } from "@angular/core";
 
 @NgModule({
   declarations: [
@@ -16,15 +22,21 @@ import { Page404Component } from './components/page404/page404.component';
     PageOneComponent,
     PageTwoComponent,
     PageAboutComponent,
-    Page404Component
+    PageLobbyComponent,
+    PageOneBComponent,
+    PageOneCComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
-    PagesModule
+    PagesModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+}
